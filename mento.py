@@ -1,31 +1,21 @@
 import requests 
 
-response=requests.get(url="https://scmeal.ml/%EC%88%9C%EC%8B%AC%EA%B3%A0")
+response=requests.get(url="https://scmeal.ml/%EC%A4%91%EC%95%99%EA%B3%A0")
 response.raise_for_status()
 
 
 data=response.json()
 
-breakfast= data["breakfast"]
-lunch= data["lunch"]
-dinner= data["dinner"]
+listbreakfast= data["breakfast"]
+listlunch= data["lunch"]
+listdinner= data["dinner"]
 
-listbreakfast=[breakfast]
+    
+def menu(a,b):
+    print(b)
+    for i in range(len(a)):
+        print(a[i])
 
-listlunch=[lunch]
-
-listdinner=[dinner]
-
-print("아침 메뉴")
-for i in range(len(listbreakfast)):
-    print(listbreakfast[i])
-        
-print("점심 메뉴")
-for i in range(len(listlunch)):
-    print(listlunch[i])
-           
-print("저녁 메뉴")
-for i in range(len(listdinner)):
-    print(listdinner[i])
-
-
+menu(listbreakfast,"아침메뉴")
+menu(listlunch,"점심메뉴")
+menu(listdinner,"저녁메뉴")    
