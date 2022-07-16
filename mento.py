@@ -17,7 +17,8 @@ def menu(menu, printStr):
         print('없음\n')
         return
     for i in range(len(menu)):
-        print(menu[i], '\n')
+        print(menu[i])
+    print('\n')
 
 menu(listbreakfast,"아침메뉴")
 menu(listlunch,"점심메뉴")
